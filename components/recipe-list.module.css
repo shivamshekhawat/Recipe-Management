@@ -1,0 +1,108 @@
+.recipeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+.recipeList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recipeList::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+.recipeList::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 20px;
+  border: 2px solid var(--background);
+}
+
+.recipeItem {
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+}
+
+.recipeItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary);
+}
+
+.selected {
+  background-color: var(--accent);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.recipeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recipeTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--card-foreground);
+}
+
+.recipeInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+
+.category {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cookTime {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.star.filled {
+  color: #fbbf24;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted-foreground);
+  background-color: var(--card);
+  border-radius: var(--radius);
+  border: 1px dashed var(--border);
+}
+
+.emptyStateSubtext {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
